@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto&display=swap');
 
 * {
-    margin: 10px;
+    margin: 0px;
+    padding: 0px;
 }
 
 body {
@@ -13,17 +14,61 @@ body {
     background: #f1f1f1;
 }
 
+.container {
+    margin: auto;
+    max-width: 800px;
+    padding-top: 30px;
+}
+
+
+.info {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 520px) {
+    .info {
+        display: block;
+        text-align: center;
+    }
+}
+
+.info img {
+    width: 150px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 14px rgba(10, 10, 10, 0.25);
+
+}
+
+.info-block {
+    margin-left: 40px;
+}
+
 .info-text p {
     font-size: 14px;
     font-style: italic;
-    color: #86898f;    
+    color: #86898f;
+    margin-bottom: 10px;
 }
 
 .card {
-  color: #0f141e;    
-  background-color: #f1f1f1;
+    color: #0f141e;
+    background-color: #f1f1f1;
+    box-sizing: border-box;
+    border-radius: 10px;
 
-  border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 15px 20px;
+}
+
+.card h2 {
+    border-bottom: 1px solid #0f141e;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.card li {
+    margin-left: 1em;
 }
 
 .bg-class-green {
@@ -44,4 +89,138 @@ body {
 .bg-class-yellow {
     background-color: rgb(243, 237, 170);
     opacity: 0.7;
+}
+
+/* Стилистика ссылки */
+a {
+    color: #86898f;
+    text-decoration: none;
+}
+
+a:hover {
+    color: orange;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+a:active {
+    color: blue;
+}
+
+a:visited {
+    text-decoration: underline;
+    color: blueviolet;
+}
+
+/* Стилистика кнопки */
+.btn {
+    background-color: #0f141e;
+    color: #f1f1f1;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-family: inherit;
+}
+
+.btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    color: orange;
+}
+
+/* Стилистика списков */
+.list {
+    margin: 0;
+    padding: 0;
+}
+
+.ol li {
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.ul {
+    list-style: none;
+}
+
+.ul li {
+    border-left: 5px solid rgba(114, 105, 231, 0.8);
+    padding-left: 5px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+}
+
+.ul li:nth-child(even) {
+    background-color: rgba(100, 193, 255, 0.25);
+}
+
+.table {
+    width: 100%;
+}
+
+.table thead th {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    background-color: rgba(241, 223, 18, 0.575)
+}
+
+.table td:nth-child(2),
+.table td:nth-child(3) {
+    color: #86898f;
+}
+
+/* Стилизация формы */
+.form h2 {
+    text-align: center;
+}
+
+.form-row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    width: 50%;
+    margin-right: 20px;
+}
+
+@media (max-width: 550px) {
+    .form-row {
+        display: block;
+    }
+    .form-group {
+        width: 100%;
+        margin-bottom: 10px;        
+    }
+}
+
+.form-group:last-child {
+    margin-right: 0;
+}
+
+.form-group label,
+.form-group-area label {
+    display: block;
+    font-size: 14px;
+    color: #38393a
+}
+
+.form-group-area {
+    width: 100%;
+    font-family: inherit;
+}
+
+.form-group input,
+.textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgb(126, 182, 241);
+    background-color: transparent;
+    border-bottom: 1px solid #86898f;
+    padding: 5px 0px 10px;
+    outline: none;
+    font-family: inherit;
+    resize: none;
 }
